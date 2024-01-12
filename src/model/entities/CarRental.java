@@ -6,8 +6,8 @@ public class CarRental {
 	private LocalDateTime start;
 	private LocalDateTime finish;
 	//associações ou composição de objeto:
-	private Vehicle vehicle;
-	private Invoice invoice;
+	private Vehicle vehicle; //Atributo do tipo Classe Veiculo
+	private Invoice invoice; //Atributo do tipo Classe Fatura
 	
 	public CarRental() {}
 

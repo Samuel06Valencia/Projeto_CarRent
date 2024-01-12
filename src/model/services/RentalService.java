@@ -9,10 +9,10 @@ public class RentalService {
 	private Double pricePerHour;
 	private Double pricePerDay;
 	//assocação:
-	private BrazilTaxService taxService;
+	private TaxService taxService; //Agora essa classe só tem dependência com a Interface TaxService,ou seja,uma espécie de contrato.
 	
 	//Não coloquei o construtor vazio, pois quero orbigar ao usar o RentalService a instanciar esses atributos.
-	public RentalService(Double pricePerHour, Double pricePerDay, BrazilTaxService taxService) {
+	public RentalService(Double pricePerHour, Double pricePerDay, TaxService taxService) {
 		this.pricePerHour = pricePerHour;
 		this.pricePerDay = pricePerDay;
 		this.taxService = taxService;

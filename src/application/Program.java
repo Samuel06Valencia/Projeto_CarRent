@@ -21,7 +21,7 @@ public class Program {
 		System.out.println("Entre com os dados do aluguel");
 		System.out.print("Modelo do carro: ");
 		String model = sc.next();
-		sc.nextLine();
+		sc.nextLine(); //Esvazia o buffer.
 		System.out.print("Retirada (dd/MM/yyyy hh:mm): ");
 		LocalDateTime start = LocalDateTime.parse(sc.nextLine(), fmt);
 		System.out.print("Retorno (dd/MM/yyyy hh:mm): ");
@@ -35,7 +35,7 @@ public class Program {
 		System.out.print("Entre com o preço por dia: ");
 		double pricePerDay = sc.nextDouble();
 		
-		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService()); //BrazilTaxService por enquanto está com dados fixos.
+		RentalService rentalService = new RentalService(pricePerHour, pricePerDay, new BrazilTaxService()); 
 		rentalService.processInvoice(cr);
 		
 		System.out.println("Fatura:");
